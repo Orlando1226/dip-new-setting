@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TestDesign</string>
+    <string name="title_health">Health</string>
+    <string name="title_pet">Meow</string>
+    <string name="title_settings">Settings</string>
+    <string name="null_result">No Record Found</string>
+    <string name="usr_name">Name</string>
+    <string name="animation_duration">60</string>
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string name="hitgoal">Congratulations! You have reached your goal for today. Keep it up!</string>
+    <string name="nohitgoal">You still have some distance to go before you reach your goal for the day. Keep pushing!</string>
+    <string name="hadMeasuredHeart">You have not measured your heart rate for today. Take charge of your health today</string>
+</resources>

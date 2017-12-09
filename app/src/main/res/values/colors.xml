@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1FAB9E</color>
+    <color name="colorPrimaryDark">#1F739E</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorCalendarHeader">#17B167</color>
+    <color name="colorCalendarBody">#2AD781</color>
+    <color name="colorCalories">#D8271E</color>
+    <color name="colorDistance">#31A2F0</color>
+    <color name="colorStepBackground">#8FCFFB</color>
+    <color name="colorHealthFragment">#BBE0E9</color>
+    <color name="grey">#BDBDBD</color>
+    <color name="red">#EE2C2C</color>
+    <color name="yellow">#fd9c06</color>
+    <color name="theme_1">#1FAB9E</color>
+    <color name="theme_2">#B1D781</color>
+    <color name="theme_3">#FAD02F</color>
+    <color name="theme_4">#F69229</color>
+    <color name="theme_5">#F16950</color>
+</resources>

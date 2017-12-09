@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.example.junhaozeng.testdesign.Views.StepArcView
+            android:id="@+id/dylan_ring"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_marginLeft="25dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="25dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="view health report"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:onClick="startStepsStatsActivity"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:weightSum="1">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="0.25">
+                <TextView
+                    android:id="@+id/tv_bp_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="10dp"
+                    android:text="N.A"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="90dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_corner_2"
+                    android:onClick="startBloodPressureProcess">
+                    <ImageView
+                        android:layout_width="85dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/icon_heart_outline"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:id="@+id/tv_bp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:text="N.A"/>
+                </LinearLayout>
+                <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="90dp"-->
+                <!--android:orientation="vertical"-->
+                <!--android:gravity="center"-->
+                <!--android:background="@drawable/rounded_corner_2">-->
+                <!--<ImageView-->
+                <!--android:layout_width="85dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:src="@drawable/icon_heart_outline"-->
+                <!--android:layout_gravity="center"/>-->
+                <!--<TextView-->
+                <!--android:id="@+id/tv_bp"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textSize="20dp"-->
+                <!--android:text="N.A"/>-->
+                <!--</LinearLayout>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="10dp"
+                    android:text="Blood Pressure"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="0.25">
+                <TextView
+                    android:id="@+id/tv_o2_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="10dp"
+                    android:text="N.A"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="90dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_corner_3"
+                    android:onClick="startO2Process">
+                    <ImageView
+                        android:layout_width="85dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/icon_oxygen"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:id="@+id/tv_o2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:text="N.A"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="10dp"
+                    android:text="Oxygen Saturation"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="0.25">
+                <TextView
+                    android:id="@+id/tv_hr_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="10dp"
+                    android:text="N.A"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="90dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_corner_4"
+                    android:onClick="startHeartRateProcess">
+                    <ImageView
+                        android:layout_width="85dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/icon_heart_monitor"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:id="@+id/tv_hr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:text="N.A"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="10dp"
+                    android:text="Heartbeat Rate"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="0.25">
+                <TextView
+                    android:id="@+id/tv_rp_date"
+                    android:textSize="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="N.A"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="90dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_corner_1"
+                    android:onClick="startRespirationProcess">
+                    <ImageView
+                        android:layout_width="85dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/icon_lungs"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:id="@+id/tv_rp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:text="N.A"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="10dp"
+                    android:text="Respiratory Rate"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:fillViewport="true">-->
+
+    <!--<LinearLayout-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="8dp"-->
+            <!--android:layout_marginLeft="8dp"-->
+            <!--android:background="@color/colorHealthFragment">-->
+            <!--<com.example.junhaozeng.testdesign.Views.StepArcView-->
+                <!--android:id="@+id/dylan_ring"-->
+                <!--android:layout_width="200dp"-->
+                <!--android:layout_height="180dp"-->
+                <!--android:layout_marginLeft="25dp"-->
+                <!--android:layout_marginRight="25dp"-->
+                <!--android:layout_centerInParent="true"/>-->
+            <!--<Button-->
+                <!--android:layout_width="80dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:text="view stats"-->
+                <!--android:textSize="9dp"-->
+                <!--android:onClick="startStepsStatsActivity"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:layout_alignParentEnd="true"-->
+                <!--android:layout_marginEnd="10dp" />-->
+        <!--</RelativeLayout>-->
+        <!--<LinearLayout-->
+            <!--android:layout_marginLeft="8dp"-->
+            <!--android:layout_marginRight="8dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="2dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_marginTop="5dp">-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="2">-->
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="155dp"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:background="#9CB2EE"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_marginRight="8dp">-->
+                    <!--<Button-->
+                        <!--android:layout_width="40dp"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginTop="5dp"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:background="@drawable/icon_heart_outline"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="Blood Pressure"/>-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_bp"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="N.A"/>-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_bp_date"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textSize="10dp"-->
+                        <!--android:textColor="#efefef"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="N.A"/>-->
+                    <!--<Button-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Measure"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:textSize="10dp"/>-->
+                <!--</LinearLayout>-->
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="155dp"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:background="#E69CEE"-->
+                    <!--android:layout_weight="1">-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="5dp"-->
+                        <!--android:src="@drawable/icon_oxygen"-->
+                        <!--android:layout_gravity="center"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="Oxygen Saturation" />-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_o2"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="N.A"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="last date measured:"/>-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_o2_date"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="N.A"/>-->
+                    <!--<Button-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Measure"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:textSize="10dp"/>-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_marginTop="8dp">-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="155dp"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:background="#5FDAA2"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_marginRight="8dp">-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="5dp"-->
+                        <!--android:src="@drawable/icon_heart_monitor"-->
+                        <!--android:layout_gravity="center"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="Heartbeat Rate"/>-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_hr"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="N.A"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="last date measured:"/>-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_hr_date"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="N.A"/>-->
+                    <!--<Button-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Measure"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:textSize="10dp"/>-->
+                <!--</LinearLayout>-->
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="155dp"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:background="#EAE66B"-->
+                    <!--android:layout_weight="1">-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="5dp"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:src="@drawable/icon_lungs"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="Respiratory Rate"/>-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_rp"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="N.A"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="last date measured:"/>-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_rp_date"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="N.A"/>-->
+                    <!--<Button-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Measure"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:textSize="10dp"/>-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+<!--</ScrollView>-->
+    <!--&lt;!&ndash;<?xml version="1.0" encoding="utf-8"?>&ndash;&gt;-->
+<!--&lt;!&ndash;<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:fillViewport="true">&ndash;&gt;-->
+    <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+        <!--&lt;!&ndash;android:orientation="vertical"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:background="@color/colorHealthFragment">&ndash;&gt;-->
+        <!--&lt;!&ndash;<Button&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="250dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="STEPS"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textStyle="bold"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textColor="#ffffff"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_marginTop="5dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:onClick="startStepsStatsActivity">&ndash;&gt;-->
+        <!--&lt;!&ndash;</Button>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="250dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="200dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:background="#ffffff"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_gravity="center">&ndash;&gt;-->
+            <!--&lt;!&ndash;<com.example.junhaozeng.testdesign.Views.StepArcView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/dylan_ring"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="200dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="200dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginLeft="25dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginRight="25dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="#ffffff"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+        <!--&lt;!&ndash;<Button&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="250dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="HEART RATE"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textStyle="bold"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:textColor="#ffffff"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:onClick="startHeartbeatActivity">&ndash;&gt;-->
+        <!--&lt;!&ndash;</Button>&ndash;&gt;-->
+        <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="250dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="200dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:background="#ffffff"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:orientation="vertical">&ndash;&gt;-->
+            <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="100dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="100dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginLeft="75dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginRight="75dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="5dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:src="@drawable/my_heart"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="50dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="50dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:src="@drawable/my_ecg"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="heart rate:"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/tv_hr"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content" />&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="last date measured:"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/tv_hr_date"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="respiratory rate:"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/tv_rp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content" />&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="last date measured:"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/tv_rp_date"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="blood pressure:"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/tv_bp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content" />&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="last date measured:"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/tv_bp_date"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="SpO2 saturation:"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/tv_o2"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content" />&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="last date measured:"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/tv_o2_date"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content" />&ndash;&gt;-->
+    <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+<!--&lt;!&ndash;</ScrollView>&ndash;&gt;-->
+<!--&lt;!&ndash;<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"&ndash;&gt;-->
+    <!--&lt;!&ndash;xmlns:tools="http://schemas.android.com/tools"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/xml_health_fragment"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="fill_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;tools:context="com.example.junhaozeng.testdesign.Fragments.HealthFragment">&ndash;&gt;-->
+    <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+        <!--&lt;!&ndash;xmlns:android="http://schemas.android.com/apk/res/android"&ndash;&gt;-->
+        <!--&lt;!&ndash;xmlns:tools="http://schemas.android.com/tools"&ndash;&gt;-->
+        <!--&lt;!&ndash;tools:context="com.example.junhaozeng.testdesign.Fragments.HealthFragment"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="fill_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:orientation="vertical" >&ndash;&gt;-->
+
+
+        <!--&lt;!&ndash;<RelativeLayout&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content">&ndash;&gt;-->
+            <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="80dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="80dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:src="@drawable/ic_footprint"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/iv_footprint" />&ndash;&gt;-->
+            <!--&lt;!&ndash;<ProgressBar&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/pb_steps"&ndash;&gt;-->
+                <!--&lt;!&ndash;style="?android:attr/progressBarStyleHorizontal"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="300dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_below="@+id/tv_steps"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_toEndOf="@+id/iv_footprint" />&ndash;&gt;-->
+            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="STEP TRACKER"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/tv_step_tracker"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_alignParentTop="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_toEndOf="@+id/iv_footprint"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="14dp" />&ndash;&gt;-->
+            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/tv_steps"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="&#45;&#45;/8000"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_below="@+id/tv_step_tracker"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="12dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_toEndOf="@+id/iv_footprint"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="statistics"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/tv_steps_statistics"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textStyle="italic"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_alignTop="@+id/tv_step_tracker"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_alignParentEnd="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:onClick="startStepsStatsActivity"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;</RelativeLayout>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<RelativeLayout&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content">&ndash;&gt;-->
+            <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="80dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="80dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:src="@drawable/ic_healthfunc_heart"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/iv_heart"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="HEARTBEAT RATE"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/tv_heartbeat_title"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_alignParentTop="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_toEndOf="@+id/iv_heart"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="14dp"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/tv_heartbeat"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="-&#45;&#45; ppm"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_toRightOf="@+id/tv_hb_datetime"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_below="@+id/tv_heartbeat_title"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="12dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginLeft="20dp"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/tv_hb_datetime"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="&#45;&#45;&#45;&#45;/&#45;&#45;/&#45;&#45; &#45;&#45;:&#45;&#45;:&#45;&#45;"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_toEndOf="@+id/iv_heart"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_below="@+id/tv_heartbeat_title"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="12dp" />&ndash;&gt;-->
+            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="statistics"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/tv_heart_statistics"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textStyle="italic"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_alignTop="@+id/tv_heartbeat_title"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_alignParentEnd="true" />&ndash;&gt;-->
+        <!--&lt;!&ndash;</RelativeLayout>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+<!--&lt;!&ndash;</ScrollView>&ndash;&gt;-->

@@ -1,0 +1,146 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/forestbg"
+    tools:context="com.example.junhaozeng.testdesign.Fragments.PetFragment">
+    <ProgressBar
+        android:id="@+id/stepProgressBar"
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_centerHorizontal="true"
+        android:progressDrawable="@drawable/custom_progressbar"
+        android:layout_below="@+id/linear1"/>
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/levelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
+            android:textSize="30dp"
+            android:text="Level:"
+            android:textColor="@color/colorAccent"
+            android:layout_centerHorizontal="true"
+            android:layout_alignStart="@+id/button" />
+
+        <TextView
+            android:id="@+id/level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="30dp"
+            android:textSize="30dp"
+            android:layout_toRightOf="@+id/levelText"
+            android:text=" " />
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:id="@+id/idle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/animation_idle"
+        android:layout_below="@+id/linear2"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/walk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/animation_idle"
+        android:layout_below="@+id/linear2"
+        android:layout_alignStart="@+id/idle" />
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/stepProgressBar">
+
+        <TextView
+            android:id="@+id/currentPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:text=" "
+            android:textColor="@color/colorAccent"
+            android:layout_below="@+id/stepProgressBar"
+            android:layout_alignStart="@+id/button" />
+
+        <TextView
+            android:id="@+id/separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/currentPoint"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/stepProgressBar"
+            android:text="/" />
+
+        <TextView
+            android:id="@+id/requiredPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/separator"
+            android:layout_below="@+id/stepProgressBar"
+            android:text="100" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dialog"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:text=" "
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:layout_marginTop="74dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/yellow___black_dashed_border"
+        android:gravity="center"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp"/>
+
+</RelativeLayout>
+
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context="com.example.junhaozeng.testdesign.Fragments.PetFragment">-->
+    <!--<ImageView-->
+        <!--android:id="@+id/iv_idle"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:background="@drawable/animation_idle" />-->
+    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/walk"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_centerInParent="true"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:background="@drawable/animation_walk" />&ndash;&gt;-->
+        <!--&lt;!&ndash;<Button&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/button"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="Evolve"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_below="@+id/idle"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_centerHorizontal="true"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_marginTop="16dp" />&ndash;&gt;-->
+<!--</RelativeLayout>-->

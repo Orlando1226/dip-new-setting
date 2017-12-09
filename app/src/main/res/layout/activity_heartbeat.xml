@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/heartstart"
+            android:text="Start" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/heartstop"
+            android:text="Stop" />
+    </LinearLayout>
+    <SurfaceView
+        android:id="@+id/camera_view"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="50dip"
+        android:layout_marginRight="50dip" />
+    <LinearLayout
+        android:id="@+id/pulse_graph"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical" >
+        <com.github.mikephil.charting.charts.LineChart
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/chart"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_heartbeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dip"
+        android:layout_weight="1"
+        android:text="heartbeat rate" >
+    </TextView>
+    <TextView
+        android:id="@+id/tv_pixel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dip"
+        android:layout_weight="1"
+        android:text="average pixel" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/tv_pulse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dip"
+        android:layout_weight="1"
+        android:text="number of pulses" >
+    </TextView>
+</LinearLayout>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical" >-->
+
+    <!--<SurfaceView-->
+        <!--android:id="@+id/camera_view"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:layout_marginLeft="50dip"-->
+        <!--android:layout_marginRight="50dip" />-->
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/pulse_graph"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:orientation="vertical" >-->
+    <!--</LinearLayout>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_heartbeat"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="50dip"-->
+        <!--android:layout_weight="1"-->
+        <!--android:text="heartbeat rate" >-->
+    <!--</TextView>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_pixel"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="50dip"-->
+        <!--android:layout_weight="1"-->
+        <!--android:text="average pixel" >-->
+    <!--</TextView>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_pulse"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="50dip"-->
+        <!--android:layout_weight="1"-->
+        <!--android:text="number of pulses" >-->
+    <!--</TextView>-->
+
+<!--</LinearLayout>-->
